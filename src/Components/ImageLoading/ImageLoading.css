@@ -1,0 +1,57 @@
+.blurDiv {
+    height: 21rem !important;
+    width: 21rem !important;
+  }
+  
+  canvas {
+    border-radius: 100% !important;
+  }
+  
+  @media (max-width: 992px) {
+    .blurDiv {
+      height: 26rem !important;
+      width: 26rem !important;
+    }
+  }
+  
+  @media (max-width: 770px) {
+    .blurDiv {
+      height: 20rem !important;
+      width: 20rem !important;
+    }
+  }
+  
+  @media (max-width: 550px) {
+    .blurDiv {
+      height: 18rem !important;
+      width: 18rem !important;
+    }
+  }
+  
+  @media (max-width: 470px) {
+    .blurDiv {
+      height: 16rem !important;
+      width: 16rem !important;
+    }
+  }
+  
+  @media (max-width: 430px) {
+    .blurDiv {
+      height: 14rem !important;
+      width: 14rem !important;
+    }
+  }
+  
+  @media (max-width: 380px) {
+    .blurDiv {
+      height: 12rem !important;
+      width: 12rem !important;
+    }
+  }
+  
+  @media (max-width: 330px) {
+    .blurDiv {
+      height: 10rem !important;
+      width: 10rem !important;
+    }
+  }
