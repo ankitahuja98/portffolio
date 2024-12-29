@@ -33,13 +33,13 @@
   justify-content: flex-start;
 }
 .Project_Card {
-  cursor: pointer;
+  cursor: default !important;
   padding: 1rem;
   border-radius: 1rem;
   border: 1px solid white;
   box-shadow: 1px 1px 6px grey;
   width: 19rem;
-  height: 25rem;
+  height: 29rem;
   margin-bottom: 2rem;
   transition: 0.3s transform ease-in-out;
 }
@@ -91,6 +91,18 @@
 /* scroll changes ends */
 .card_btn {
   font-size: 11px;
+  display: flex;
+}
+.tags {
+  color: black;
+  background-color: rgb(166, 166, 166);
+  border: 1px solid black;
+  font-weight: 500;
+  border-radius: 30px;
+  padding: 3px 7px;
+  font-size: 12px;
+  margin: 1px;
+  cursor: default !important;
 }
 
 @media (max-width: 768px) {
@@ -111,7 +123,7 @@
 @media (max-width: 350px) {
   .Project_Card {
     width: 15rem;
-    height: 25rem;
+    height: 31rem;
   }
   .card_btn {
     font-size: 07px;

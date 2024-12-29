@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Blurhash } from "react-blurhash";
-import "./ImageLoading.css"
+import "./ImageLoading.css";
 
 const ImageLoading = ({ src, hash }) => {
   const [imageLoaded, setimageLoaded] = useState(false);
@@ -15,10 +15,8 @@ const ImageLoading = ({ src, hash }) => {
 
   return (
     <>
-      <div  style={{display: imageLoaded ? "none" : "block" }}>
-        <Blurhash className="blurDiv"
-          hash={hash}
-        ></Blurhash>
+      <div style={{ display: imageLoaded ? "none" : "block" }}>
+        <Blurhash className="blurDiv" hash={hash}></Blurhash>
       </div>
       <img
         src={src}

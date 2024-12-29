@@ -6,7 +6,7 @@ import MainPic from "../../Images/Main.png";
 import ImageLoading from "../ImageLoading/ImageLoading";
 
 const Hero = () => {
-    const hash = "LMMGwj%c.jV?_ARRa+kD4}N10qxs"
+  const hash = "LMMGwj%c.jV?_ARRa+kD4}N10qxs";
   return (
     <div id="HeroSection">
       <div className="HeroContainer ">
@@ -28,12 +28,11 @@ const Hero = () => {
                     />
                   </span>
                 </div>
-                <div className="Subtitle">{Bio.description}</div>
+                <p className="description">{Bio.description}</p>
 
                 {/* Resume button started */}
                 <div className="btn btn-outline-primary ResumeButton my-3">
                   <a href={Bio.resume} rel="noreferrer" target="_blank">
-                    {" "}
                     <div className="ResumeButtondiv">Check Resume</div>
                   </a>
                 </div>

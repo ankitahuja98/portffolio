@@ -36,95 +36,68 @@
   align-items: center;
   width: 11% !important;
 }
-
+.skillIconDiv {
+  padding: 0px 0px;
+}
 .skillicon {
-  width: 90%;
+  width: 45%;
 }
 .skillicon:hover {
-  filter:drop-shadow(0px 0px 12px var(--primary));
+  filter: drop-shadow(0px 0px 12px var(--primary));
 }
 .SkillTag {
+  font-size: 1rem;
   margin-top: 0.5rem;
   color: var(--text_primary);
 }
 
-.skillrow1 {
-  width: 70%;
-  margin-top: 4rem !important;
-  justify-content: space-between;
-}
-
 .skillrow2 {
-  width: 70%;
-  margin-top: 3rem !important;
-  justify-content: space-evenly;
-}
-
-@media (max-width: 1400px) {
-  .skillCol {
-    width: 13% !important;
-  }
+  width: 90%;
 }
 
 @media (max-width: 1200px) {
-  .skillCol {
-    width: 14% !important;
-  }
-
-  .skillrow1 {
-    width: 80%;
-    margin-top: 4rem !important;
-    justify-content: space-between;
-  }
-
-  .skillrow2 {
-    width: 80%;
-    margin-top: 3rem !important;
-    justify-content: space-evenly;
+  .skillicon {
+    width: 50%;
   }
 }
 
 @media (max-width: 992px) {
+  .skillicon {
+    width: 55%;
+  }
   .heading p {
     width: 100%;
   }
-  .skillCol {
-    width: 15% !important;
+  .SkillTag {
+    font-size: 0.9rem;
   }
+}
 
-  .skillrow1 {
-    width: 100%;
-    margin-top: 4rem !important;
-    justify-content: space-between;
+@media (max-width: 650px) {
+  .skillicon {
+    width: 70%;
   }
-
-  .skillrow2 {
-    width: 100%;
-    margin-top: 3rem !important;
-    justify-content: space-evenly;
+  .SkillTag {
+    font-size: 0.8rem;
   }
 }
 
 @media (max-width: 500px) {
-  .skillCol {
-    width: 20% !important;
-  }
-
-  .skillrow1 {
+  .skillicon {
     width: 100%;
-    margin-top: 2.5rem !important;
   }
-
-  .skillrow2 {
-    width: 93%;
-    margin-top: 2rem !important;
+  .skillIconDiv {
+    padding: 0px 7px;
   }
-  .SkillTag{
-    font-size: 0.8rem;
+  .SkillTag {
+    font-size: 0.65rem;
   }
 }
 @media (max-width: 400px) {
-  .SkillTag{
+  .SkillTag {
     font-size: 0.6rem;
+  }
+  .skillIconDiv {
+    padding: 0px 7px !important;
   }
 }
