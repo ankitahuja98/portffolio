@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.4d3d85f4.css",
-    "main.js": "/static/js/main.b2c446a7.js",
+    "main.js": "/static/js/main.55b7d148.js",
     "static/css/624.8afe3999.chunk.css": "/static/css/624.8afe3999.chunk.css",
     "static/js/624.e45d28cd.chunk.js": "/static/js/624.e45d28cd.chunk.js",
     "static/js/592.6d7de513.chunk.js": "/static/js/592.6d7de513.chunk.js",
@@ -12,9 +12,8 @@
     "static/media/Weather2.png": "/static/media/Weather2.82c7a5ea5625fb13d35d.png",
     "static/media/BlogManagement.png": "/static/media/BlogManagement.6db3e6cf908f01f57a43.png",
     "static/media/Main.png": "/static/media/Main.1c57c36844a33a6dfc5e.png",
-    "static/media/DGDE-Logo2.png": "/static/media/DGDE-Logo2.31c15ea134ca8d82e332.png",
+    "static/media/DGDE-Logo2.png": "/static/media/DGDE-Logo2.e77a11fc56814e4a823f.png",
     "static/media/redux.png": "/static/media/redux.b336734fc355694c5ddd.png",
-    "static/media/close.png": "/static/media/close.2f5343b673c705e7f63a.png",
     "static/media/nodejs.png": "/static/media/nodejs.686b5d033bad5444b1a1.png",
     "static/media/css.png": "/static/media/css.a1bcae352794e1d768c8.png",
     "static/media/jquery.png": "/static/media/jquery.f7594a53118005776ee6.png",
@@ -27,7 +26,7 @@
     "static/media/react.png": "/static/media/react.49d8003e3c133117911f.png",
     "index.html": "/index.html",
     "main.4d3d85f4.css.map": "/static/css/main.4d3d85f4.css.map",
-    "main.b2c446a7.js.map": "/static/js/main.b2c446a7.js.map",
+    "main.55b7d148.js.map": "/static/js/main.55b7d148.js.map",
     "624.8afe3999.chunk.css.map": "/static/css/624.8afe3999.chunk.css.map",
     "624.e45d28cd.chunk.js.map": "/static/js/624.e45d28cd.chunk.js.map",
     "592.6d7de513.chunk.js.map": "/static/js/592.6d7de513.chunk.js.map",
@@ -35,6 +34,6 @@
   },
   "entrypoints": [
     "static/css/main.4d3d85f4.css",
-    "static/js/main.b2c446a7.js"
+    "static/js/main.55b7d148.js"
   ]
 }
