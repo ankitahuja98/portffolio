@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import "./Projects.css";
 import { projects } from "../../data/constants";
 import useWindowDimensions from "../../utils/CurrentScreenSize";
