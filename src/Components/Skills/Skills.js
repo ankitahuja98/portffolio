@@ -2,20 +2,35 @@ import React from "react";
 import "./Skills.css";
 import { skillSet1 } from "../../data/constants";
 import { skillSet2 } from "../../data/constants";
+import { motion } from "framer-motion";
+import { MotionContainer } from "../../utils/MotionContainer";
 
 const Skills = () => {
   return (
     <div className="flex justify-center ">
       <div className="skillcontainer w-11/12 lg:w-10/12 " id="skill">
-        <div className="heading">
+        <motion.div
+          variants={MotionContainer("up", 0.3, 0, 20)}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true }}
+          className="heading"
+        >
           <h1>Skills</h1>
           <p>
             Here are some of my skills on which i have been working on for the
             past 3 years
           </p>
-        </div>
+        </motion.div>
 
-        <div className="row" style={{ margin: "0px 0px" }}>
+        <motion.div
+          className="row"
+          variants={MotionContainer("right", 0.4, 30, 0)}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true }}
+          style={{ margin: "0px 0px" }}
+        >
           {skillSet1.map((val, ind) => {
             return (
               <div
@@ -27,8 +42,15 @@ const Skills = () => {
               </div>
             );
           })}
-        </div>
-        <div className="row skillrow2" style={{ margin: "0px 0px" }}>
+        </motion.div>
+        <motion.div
+          className="row skillrow2"
+          variants={MotionContainer("left", 0.4, 30, 0)}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true }}
+          style={{ margin: "0px 0px" }}
+        >
           {skillSet2.map((val, ind) => {
             return (
               <div
@@ -40,7 +62,7 @@ const Skills = () => {
               </div>
             );
           })}
-        </div>
+        </motion.div>
       </div>
     </div>
   );

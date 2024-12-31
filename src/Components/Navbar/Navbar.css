@@ -14,8 +14,6 @@
   position: sticky;
   top: 0;
   z-index: 10;
-  /* border: 2px solid red; */
-  /* border: 2px solid red; */
 }
 
 .NavContainer {
@@ -30,9 +28,6 @@
 }
 .NavLogo {
   width: 15%;
-}
-.NavLogo img {
-  width: 40%;
 }
 .NavItems {
   display: flex;
@@ -118,14 +113,6 @@ a.active {
     height: 20rem;
     align-items: flex-start;
   }
-  .NavLogo {
-    width: 2.7rem;
-    height: 5.1rem;
-    margin-top: 1rem;
-  }
-  .NavLogo img {
-    width: 137% !important;
-  }
   .NavItems {
     font-size: 1.1rem;
     display: flex;
@@ -135,7 +122,7 @@ a.active {
     margin-left: 0px;
   }
   .NavLink {
-    margin-bottom: 1rem;
+    margin-bottom: 0.7rem;
   }
   .ButtonContainer {
     display: none;

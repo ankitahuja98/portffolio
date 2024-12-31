@@ -1,22 +1,37 @@
 import React from "react";
 import "./Experience.css";
 import { experiences } from "../../data/constants";
+import { motion } from "framer-motion";
+import { MotionContainer } from "../../utils/MotionContainer";
 
 const Experience = () => {
   return (
     <div className="container expContainer" id="experience">
-      <div className="ExpHeading">
+      <motion.div
+        className="ExpHeading"
+        variants={MotionContainer("up", 0.3, 0, 20)}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true }}
+      >
         <h1>Experience</h1>
         <p className="ExpHeadingBody">
           My work experience as a Software Engineer and working on different
           companies and projects.
         </p>
-      </div>
+      </motion.div>
 
       {experiences.map((val, ind) => {
         const { image, role, company, date, desc, skills } = val;
         return (
-          <div className="Exp_card" key={val.id}>
+          <motion.div
+            variants={MotionContainer("up", 0.3, 0, 20)}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true }}
+            className="Exp_card"
+            key={val.id}
+          >
             <div className="flex">
               <img className="CompanyLogo" src={image} alt="CompanyLogo" />
 
@@ -26,7 +41,6 @@ const Experience = () => {
                 <p>{date}</p>
               </div>
             </div>
-
             {skills && skills.length > 0 && (
               <div className="mb-3">
                 {skills.map((skills) => (
@@ -51,8 +65,7 @@ const Experience = () => {
                 ))}
               </div>
             )}
-            {/* <p className="jobDesp">{desc}</p> */}
-          </div>
+          </motion.div>
         );
       })}
     </div>

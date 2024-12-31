@@ -1,11 +1,22 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Projects.css";
 import { projects } from "../../data/constants";
+import useWindowDimensions from "../../utils/CurrentScreenSize";
+import { motion } from "framer-motion";
+import { MotionContainer } from "../../utils/MotionContainer";
 
 const Projects = () => {
+  const windowDimension = useWindowDimensions();
+  const { width } = windowDimension;
   return (
     <div className="container ProjectContainer" id="projects">
-      <div className="Project_Heading">
+      <motion.div
+        className="Project_Heading"
+        variants={MotionContainer("left", 0.3, 30, 0)}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true }}
+      >
         <p className="mb-1">MY WORK</p>
         <h1 className="mb-3">Projects</h1>
         <p>
@@ -15,12 +26,24 @@ const Projects = () => {
           ability to solve complex problems, work with different technologies,
           and manage projects effectively.
         </p>
-      </div>
+      </motion.div>
 
       <div className="row cardrow">
         {projects.map((value, index) => {
           return (
-            <div className="col-12 col-md-6 col-lg-4 cardCol" key={value.id}>
+            <motion.div
+              className="col-12 col-md-6 col-lg-4 cardCol"
+              key={value.id}
+              variants={MotionContainer(
+                "up",
+                width > 768 ? value.delay : 0.3,
+                0,
+                30
+              )}
+              initial="hidden"
+              whileInView="show"
+              viewport={{ once: true }}
+            >
               <div className="Project_Card">
                 <div className="Project_Card_img">
                   <img src={value.image} alt={value.alt} />
@@ -77,7 +100,7 @@ const Projects = () => {
                 </div>
                 {/* Project card Buttons ended */}
               </div>
-            </div>
+            </motion.div>
           );
         })}
       </div>

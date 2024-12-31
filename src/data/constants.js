@@ -30,6 +30,7 @@ export const Bio = {
 export const projects = [
   {
     id: 1,
+    delay: 0.5,
     title: "Swiggy Clone",
     date: "",
     description:
@@ -53,6 +54,7 @@ export const projects = [
   },
   {
     id: 2,
+    delay: 0.7,
     title: "Blog Management",
     date: "",
     description:
@@ -73,6 +75,7 @@ export const projects = [
   },
   {
     id: 3,
+    delay: 0.9,
     title: "Weather App",
     date: "",
     description:

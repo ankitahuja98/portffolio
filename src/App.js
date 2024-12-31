@@ -10,10 +10,9 @@ import { BrowserRouter } from "react-router-dom";
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import "../node_modules/bootstrap/dist/js/bootstrap.bundle";
 import Projects from "./Components/Projects/Projects";
-import { lazy, Suspense } from "react";
+import { lazy, Suspense, useEffect } from "react";
 
 const Contact = lazy(() => import("./Components/Contact/Contact"));
-// import Contact from "./Components/Contact/Contact";
 
 const Body = styled.div`
   background-color: ${({ theme }) => theme.bg};
@@ -65,30 +64,3 @@ const App = () => {
 };
 
 export default App;
-
-/* <ThemeProvider theme={darkTheme}>
-      <BrowserRouter>
-        <Navbar />
-
-        <Body>
-          <Routes>
-            <Route exact='true' path="*" element={<Hero />}></Route>
-          </Routes>
-          <Wrapper>
-            <Routes>
-              <Route exact='true' path="/skills" element={<Skills />}></Route>
-              <Route exact='true' path="/expreience" element={<Experience />}></Route>
-            </Routes>
-          </Wrapper>
-          <Routes>
-            <Route exact='true' path="/projects" element={<Projects />}></Route>
-          </Routes>
-          <Wrapper>
-            <Routes>
-              <Route exact='true' path="/contact" element={<Contact />}></Route>
-            </Routes>
-          </Wrapper>
-        </Body>
-
-      </BrowserRouter>
-    </ThemeProvider> */

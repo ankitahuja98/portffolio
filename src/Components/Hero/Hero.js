@@ -4,9 +4,14 @@ import { Bio } from "../../data/constants";
 import Typewriter from "typewriter-effect";
 import MainPic from "../../Images/Main.png";
 import ImageLoading from "../ImageLoading/ImageLoading";
+import useWindowDimensions from "../../utils/CurrentScreenSize";
+import { motion } from "framer-motion";
+import { MotionContainer } from "../../utils/MotionContainer";
 
 const Hero = () => {
   const hash = "LMMGwj%c.jV?_ARRa+kD4}N10qxs";
+  const windowDimension = useWindowDimensions();
+  const { width } = windowDimension;
   return (
     <div id="HeroSection">
       <div className="HeroContainer ">
@@ -15,8 +20,22 @@ const Hero = () => {
             {/* Hero Section Left Started */}
             <div className="HeroLeft col-12 col-md-12 col-lg-6 order-1 order-lg-0">
               <div className="HeroLeftContainer">
-                <div className="Title">Hi, I am {Bio.name}</div>
-                <div className="Textloop">
+                <motion.div
+                  variants={MotionContainer("right", 0.3, 30, 0)}
+                  initial="hidden"
+                  whileInView="show"
+                  viewport={{ once: true }}
+                  className="Title"
+                >
+                  Hi, I am {Bio.name}
+                </motion.div>
+                <motion.div
+                  variants={MotionContainer("right", 0.5, 30, 0)}
+                  initial="hidden"
+                  whileInView="show"
+                  viewport={{ once: true }}
+                  className="Textloop"
+                >
                   I am a
                   <span>
                     <Typewriter
@@ -27,15 +46,29 @@ const Hero = () => {
                       }}
                     />
                   </span>
-                </div>
-                <p className="description">{Bio.description}</p>
+                </motion.div>
+                <motion.p
+                  variants={MotionContainer("right", 0.6, 30, 0)}
+                  initial="hidden"
+                  whileInView="show"
+                  viewport={{ once: true }}
+                  className="description"
+                >
+                  {Bio.description}
+                </motion.p>
 
                 {/* Resume button started */}
-                <div className="btn btn-outline-primary ResumeButton my-3">
+                <motion.div
+                  variants={MotionContainer("", width > 768 ? 0.7 : "", 30, 0)}
+                  initial="hidden"
+                  whileInView="show"
+                  viewport={{ once: true }}
+                  className="btn btn-outline-primary ResumeButton my-3"
+                >
                   <a href={Bio.resume} rel="noreferrer" target="_blank">
-                    <div className="ResumeButtondiv">Check Resume</div>
+                    <divs className="ResumeButtondiv">Check Resume</divs>
                   </a>
-                </div>
+                </motion.div>
                 {/* Resume button Ended */}
 
                 <div className="row w-100 d-flex justify-content-center align-items-center mt-3">
@@ -74,11 +107,17 @@ const Hero = () => {
             {/* Hero Section Left Ended */}
 
             {/* Hero Section Right Started */}
-            <div className="HeroRight col-6 col-md-6 col-lg-6 order-0 order-lg-1">
+            <motion.div
+              variants={MotionContainer("up", 0.5, 0, 30)}
+              initial="hidden"
+              whileInView="show"
+              viewport={{ once: true }}
+              className="HeroRight col-6 col-md-6 col-lg-6 order-0 order-lg-1"
+            >
               <div className="HeroRightContainer d-flex justify-content-center align-items-center">
                 <ImageLoading src={MainPic} hash={hash} />
               </div>
-            </div>
+            </motion.div>
             {/* Hero Section Right Ended */}
           </div>
         </div>
