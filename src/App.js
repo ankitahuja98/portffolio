@@ -11,6 +11,7 @@ import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import "../node_modules/bootstrap/dist/js/bootstrap.bundle";
 import Projects from "./Components/Projects/Projects";
 import { lazy, Suspense } from "react";
+import Footer from "./Components/Footer/Footer";
 
 const Contact = lazy(() => import("./Components/Contact/Contact"));
 
@@ -57,6 +58,7 @@ const App = () => {
               <Contact />
             </Suspense>
           </Wrapper>
+          <Footer />
         </Body>
       </BrowserRouter>
     </ThemeProvider>
